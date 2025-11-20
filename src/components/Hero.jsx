@@ -54,9 +54,9 @@ const Hero = () => {
                         gap: '16px',
                         animationDelay: '0.2s'
                     }}>
-                        <button className="btn btn-primary">
+                        <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>
                             Download App
-                        </button>
+                        </a>
                         <button className="btn btn-secondary">
                             View Demo
                         </button>

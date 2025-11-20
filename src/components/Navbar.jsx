@@ -35,9 +35,9 @@ const Navbar = () => {
           <a href="#testimonials" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Reviews</a>
         </div>
 
-        <button className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.9rem' }}>
+        <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.9rem', textDecoration: 'none' }}>
           Download App
-        </button>
+        </a>
       </div>
     </nav>
   );

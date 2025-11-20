@@ -28,7 +28,7 @@ const Footer = () => {
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <a href="#">Features</a>
                                 <a href="#">Pricing</a>
-                                <a href="#">Download</a>
+                                <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer">Download</a>
                                 <a href="#">Changelog</a>
                             </div>
                         </div>

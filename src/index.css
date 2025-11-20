@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   /* Colors - Light Theme */
   --bg-primary: transparent;
   --bg-secondary: rgba(255, 255, 255, 0.5);
