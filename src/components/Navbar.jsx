@@ -1,0 +1,46 @@
+import React, { useState, useEffect } from 'react';
+
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 100,
+      padding: '20px 0',
+      transition: 'all 0.3s ease',
+      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(10px)' : 'none',
+      borderBottom: scrolled ? '1px solid var(--border-color)' : 'none',
+    }}>
+      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/logo.png" alt="JobCalc" style={{ height: '60px', width: 'auto' }} />
+        </div>
+
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+          <a href="#features" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Features</a>
+          <a href="#how-it-works" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>How it Works</a>
+          <a href="#testimonials" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Reviews</a>
+        </div>
+
+        <button className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.9rem' }}>
+          Download App
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

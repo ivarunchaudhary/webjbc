@@ -1,0 +1,157 @@
+:root {
+  /* Colors - Light Theme */
+  --bg-primary: transparent;
+  --bg-secondary: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white */
+  --bg-tertiary: #F3F4F6;
+  /* Gray 100 */
+
+  --text-primary: #111827;
+  /* Gray 900 */
+  --text-secondary: #4B5563;
+  /* Gray 600 */
+  --text-tertiary: #9CA3AF;
+  /* Gray 400 */
+
+  --accent-primary: #2563EB;
+  /* Blue 600 */
+  --accent-secondary: #059669;
+  /* Emerald 600 */
+  --accent-hover: #1D4ED8;
+
+  --border-color: #E5E7EB;
+  /* Gray 200 */
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --container-width: 1200px;
+  --section-padding: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8FAFC;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #18181B;
+  /* Zinc 900 */
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #27272A;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #F3F4F6;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: #E5E7EB;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  /* Removed gradient for cleaner look in light mode, or use a subtle dark gradient */
+  background: linear-gradient(to right, #111827, #4B5563);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 64px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Glassmorphism Card */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
