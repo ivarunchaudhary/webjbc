@@ -49,7 +49,7 @@ const Hero = () => {
                         Create professional, tiered estimates in 30 seconds using photos & local market data. Win more jobs with "Good-Better-Best" proposals.
                     </p>
 
-                    <div className="animate-fade-in" style={{
+                    <div className="animate-fade-in hero-buttons" style={{
                         display: 'flex',
                         gap: '16px',
                         animationDelay: '0.2s'

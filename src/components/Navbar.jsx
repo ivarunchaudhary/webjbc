@@ -29,7 +29,7 @@ const Navbar = () => {
           <img src="/logo.png" alt="JobCalc" style={{ height: '60px', width: 'auto' }} />
         </div>
 
-        <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+        <div className="navbar-links" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
           <a href="#features" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Features</a>
           <a href="#how-it-works" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>How it Works</a>
           <a href="#testimonials" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Reviews</a>

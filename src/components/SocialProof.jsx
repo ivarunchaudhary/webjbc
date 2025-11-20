@@ -7,7 +7,7 @@ const SocialProof = () => {
                 <h2 className="section-title">Trusted by Pros</h2>
                 <p className="section-subtitle">Join thousands of contractors growing their business with JobCalc.</p>
 
-                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                     <div className="card">
                         <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '24px' }}>
                             "I used to spend my evenings doing paperwork. Now I send estimates from the truck before I even leave the driveway. Game changer."

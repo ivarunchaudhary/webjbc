@@ -40,7 +40,7 @@ const Features = () => {
                 <h2 className="section-title">Everything You Need to Win</h2>
                 <p className="section-subtitle">Built specifically for HVAC, Plumbing, and Electrical contractors.</p>
 
-                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
+                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                     {features.map((feature, index) => (
                         <div key={index} className="card" style={{ backgroundColor: 'var(--bg-primary)' }}>
                             <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>{feature.icon}</div>

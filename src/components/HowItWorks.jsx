@@ -25,15 +25,15 @@ const HowItWorks = () => {
                 <h2 className="section-title">Estimates in Under 30 Seconds</h2>
                 <p className="section-subtitle">From job site to signed contract in three simple steps.</p>
 
-                <div style={{
+                <div className="how-it-works-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gap: '64px',
                     alignItems: 'center'
                 }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+                    <div className="how-it-works-content" style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
                         {steps.map((step, index) => (
-                            <div key={index} style={{ display: 'flex', gap: '24px' }}>
+                            <div key={index} style={{ display: 'flex', gap: '24px', textAlign: 'left' }}>
                                 <div style={{
                                     fontSize: '2rem',
                                     fontWeight: '800',
@@ -51,7 +51,7 @@ const HowItWorks = () => {
                         ))}
                     </div>
 
-                    <div style={{
+                    <div className="how-it-works-image" style={{
                         position: 'relative',
                         borderRadius: '50px',
                         overflow: 'hidden',
