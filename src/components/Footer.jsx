@@ -28,6 +28,9 @@ const Footer = () => {
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '300px' }}>
                             The #1 AI estimation app for HVAC, Plumbing, and Electrical contractors.
                         </p>
+                        <p style={{ color: 'var(--text-secondary)', marginTop: '12px' }}>
+                            <a href="mailto:support@jobcalc.app" style={{ color: 'var(--accent-primary)' }}>support@jobcalc.app</a>
+                        </p>
                     </div>
 
                     <div style={{ display: 'flex', gap: '64px', flexWrap: 'wrap' }}>
@@ -53,7 +56,7 @@ const Footer = () => {
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Legal</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <Link to="/privacy">Privacy Policy</Link>
-                                <a href="#">Terms of Service</a>
+                                <Link to="/terms">Terms of Service</Link>
                             </div>
                         </div>
                     </div>
