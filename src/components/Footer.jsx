@@ -33,10 +33,10 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
-                        <div style={{ minWidth: '120px' }}>
-                            <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Product</h4>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
+                    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'space-between', width: '100%' }}>
+                        <div style={{ flex: '1', minWidth: '100px' }}>
+                            <h4 style={{ fontWeight: '600', marginBottom: '16px', fontSize: '0.95rem' }}>Product</h4>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                                 <a href="#">Features</a>
                                 <a href="#">Pricing</a>
                                 <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer">Download</a>
@@ -44,17 +44,17 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div style={{ minWidth: '120px' }}>
-                            <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Company</h4>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
+                        <div style={{ flex: '1', minWidth: '100px' }}>
+                            <h4 style={{ fontWeight: '600', marginBottom: '16px', fontSize: '0.95rem' }}>Company</h4>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                                 <a href="#">About</a>
                                 <a href="#">Contact</a>
                             </div>
                         </div>
 
-                        <div style={{ minWidth: '120px' }}>
-                            <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Legal</h4>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
+                        <div style={{ flex: '1', minWidth: '100px' }}>
+                            <h4 style={{ fontWeight: '600', marginBottom: '16px', fontSize: '0.95rem' }}>Legal</h4>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                                 <Link to="/privacy">Privacy Policy</Link>
                                 <Link to="/terms">Terms of Service</Link>
                             </div>
