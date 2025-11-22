@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -36,7 +37,7 @@ const Footer = () => {
                                 <a href="#">Features</a>
                                 <a href="#">Pricing</a>
                                 <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer">Download</a>
-                                <a href="#">Changelog</a>
+
                             </div>
                         </div>
 
@@ -44,8 +45,6 @@ const Footer = () => {
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Company</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <a href="#">About</a>
-                                <a href="#">Blog</a>
-                                <a href="#">Careers</a>
                                 <a href="#">Contact</a>
                             </div>
                         </div>
@@ -53,7 +52,7 @@ const Footer = () => {
                         <div>
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Legal</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
-                                <a href="#">Privacy Policy</a>
+                                <Link to="/privacy">Privacy Policy</Link>
                                 <a href="#">Terms of Service</a>
                             </div>
                         </div>

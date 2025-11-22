@@ -1,29 +1,26 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProblemSection from './components/ProblemSection';
-import HowItWorks from './components/HowItWorks';
-import ProposalPreview from './components/ProposalPreview';
-import Features from './components/Features';
-import Pricing from './components/Pricing';
-import SocialProof from './components/SocialProof';
+import LandingPage from './components/LandingPage';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <HowItWorks />
-        <ProposalPreview />
-        <Features />
-        <Pricing />
-        <SocialProof />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

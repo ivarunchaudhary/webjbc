@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,9 @@ const Navbar = () => {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/logo.png" alt="JobCalc" style={{ height: '60px', width: 'auto' }} />
+          <Link to="/">
+            <img src="/logo.png" alt="JobCalc" style={{ height: '60px', width: 'auto' }} />
+          </Link>
         </div>
 
         <div className="navbar-links" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
