@@ -1,6 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <section style={{
             paddingTop: '160px',
@@ -8,14 +31,19 @@ const Hero = () => {
             overflow: 'hidden'
         }}>
             <div className="container">
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    marginBottom: '60px'
-                }}>
-                    <div className="animate-fade-in" style={{
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        marginBottom: '60px'
+                    }}
+                >
+                    <motion.div variants={itemVariants} style={{
                         backgroundColor: 'rgba(59, 130, 246, 0.1)',
                         color: 'var(--accent-primary)',
                         padding: '6px 12px',
@@ -25,10 +53,10 @@ const Hero = () => {
                         marginBottom: '24px',
                         display: 'inline-block'
                     }}>
-                        New: AI-Powered Estimates 2.0
-                    </div>
+                        AI-Powered Estimates
+                    </motion.div>
 
-                    <h1 className="animate-fade-in" style={{
+                    <motion.h1 variants={itemVariants} style={{
                         fontSize: 'clamp(3rem, 5vw, 4.5rem)',
                         fontWeight: '800',
                         lineHeight: '1.1',
@@ -37,22 +65,20 @@ const Hero = () => {
                         maxWidth: '900px'
                     }}>
                         Instant AI Pricing for Contractors.
-                    </h1>
+                    </motion.h1>
 
-                    <p className="animate-fade-in" style={{
+                    <motion.p variants={itemVariants} style={{
                         fontSize: '1.25rem',
                         color: 'var(--text-secondary)',
                         maxWidth: '600px',
-                        marginBottom: '40px',
-                        animationDelay: '0.1s'
+                        marginBottom: '40px'
                     }}>
                         Create professional, tiered estimates in 30 seconds using photos & local market data. Win more jobs with "Good-Better-Best" proposals.
-                    </p>
+                    </motion.p>
 
-                    <div className="animate-fade-in hero-buttons" style={{
+                    <motion.div variants={itemVariants} className="hero-buttons" style={{
                         display: 'flex',
-                        gap: '16px',
-                        animationDelay: '0.2s'
+                        gap: '16px'
                     }}>
                         <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>
                             Download App
@@ -60,18 +86,22 @@ const Hero = () => {
                         <button className="btn btn-secondary">
                             View Demo
                         </button>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
-                <div className="animate-fade-in" style={{
-                    position: 'relative',
-                    borderRadius: '50px',
-                    overflow: 'hidden',
-                    boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.1)',
-                    animationDelay: '0.4s',
-                    maxWidth: '320px',
-                    margin: '0 auto'
-                }}>
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+                    style={{
+                        position: 'relative',
+                        borderRadius: '50px',
+                        overflow: 'hidden',
+                        boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.1)',
+                        maxWidth: '320px',
+                        margin: '0 auto'
+                    }}
+                >
                     <div style={{
                         position: 'absolute',
                         inset: 0,
@@ -83,7 +113,7 @@ const Hero = () => {
                         alt="JobCalc Dashboard"
                         style={{ width: '100%', height: 'auto', display: 'block' }}
                     />
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Features = () => {
     const features = [
@@ -34,21 +35,62 @@ const Features = () => {
         }
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <section id="features" style={{ padding: 'var(--section-padding) 0', backgroundColor: 'var(--bg-secondary)' }}>
             <div className="container">
-                <h2 className="section-title">Everything You Need to Win</h2>
-                <p className="section-subtitle">Built specifically for HVAC, Plumbing, and Electrical contractors.</p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <h2 className="section-title">Everything You Need to Win</h2>
+                    <p className="section-subtitle">Built specifically for HVAC, Plumbing, and Electrical contractors.</p>
+                </motion.div>
 
-                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+                <motion.div
+                    className="grid"
+                    style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                >
                     {features.map((feature, index) => (
-                        <div key={index} className="card" style={{ backgroundColor: 'var(--bg-primary)' }}>
+                        <motion.div
+                            key={index}
+                            className="card"
+                            style={{ backgroundColor: 'var(--bg-primary)' }}
+                            variants={cardVariants}
+                        >
                             <div style={{ fontSize: '2.5rem', marginBottom: '16px' }}>{feature.icon}</div>
                             <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '12px' }}>{feature.title}</h3>
                             <p style={{ color: 'var(--text-secondary)' }}>{feature.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

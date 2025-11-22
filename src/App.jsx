@@ -5,6 +5,7 @@ import ProblemSection from './components/ProblemSection';
 import HowItWorks from './components/HowItWorks';
 import ProposalPreview from './components/ProposalPreview';
 import Features from './components/Features';
+import Pricing from './components/Pricing';
 import SocialProof from './components/SocialProof';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
         <HowItWorks />
         <ProposalPreview />
         <Features />
+        <Pricing />
         <SocialProof />
       </main>
       <Footer />

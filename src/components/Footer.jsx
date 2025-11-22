@@ -1,12 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer style={{
-            padding: '64px 0',
-            borderTop: '1px solid var(--border-color)',
-            backgroundColor: 'var(--bg-primary)'
-        }}>
+        <motion.footer
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            style={{
+                padding: '64px 0',
+                borderTop: '1px solid var(--border-color)',
+                backgroundColor: 'var(--bg-primary)'
+            }}
+        >
             <div className="container">
                 <div style={{
                     display: 'flex',
@@ -63,7 +70,7 @@ const Footer = () => {
                     © {new Date().getFullYear()} JobCalc Inc. All rights reserved.
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 
