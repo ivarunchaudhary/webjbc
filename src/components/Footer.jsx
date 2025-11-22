@@ -23,7 +23,7 @@ const Footer = () => {
                     gap: '48px',
                     marginBottom: '48px'
                 }}>
-                    <div>
+                    <div style={{ marginTop: '-70px' }}>
                         <img src="/logo.png" alt="JobCalc" style={{ height: '48px', width: 'auto', marginBottom: '16px' }} />
                         <p style={{ color: 'var(--text-secondary)', maxWidth: '300px' }}>
                             The #1 AI estimation app for HVAC, Plumbing, and Electrical contractors.
