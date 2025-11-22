@@ -33,8 +33,8 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '64px', flexWrap: 'wrap' }}>
-                        <div>
+                    <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
+                        <div style={{ minWidth: '120px' }}>
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Product</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <a href="#">Features</a>
@@ -44,7 +44,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div>
+                        <div style={{ minWidth: '120px' }}>
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Company</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <a href="#">About</a>
@@ -52,7 +52,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div>
+                        <div style={{ minWidth: '120px' }}>
                             <h4 style={{ fontWeight: '600', marginBottom: '16px' }}>Legal</h4>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-secondary)' }}>
                                 <Link to="/privacy">Privacy Policy</Link>

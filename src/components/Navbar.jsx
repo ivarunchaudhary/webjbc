@@ -12,6 +12,18 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for navbar height
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <nav style={{
       position: 'fixed',
@@ -33,9 +45,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-links" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-          <a href="#features" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Features</a>
-          <a href="#how-it-works" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>How it Works</a>
-          <a href="#testimonials" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500' }}>Reviews</a>
+          <a href="#features" onClick={(e) => handleSmoothScroll(e, '#features')} style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500', cursor: 'pointer' }}>Features</a>
+          <a href="#how-it-works" onClick={(e) => handleSmoothScroll(e, '#how-it-works')} style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500', cursor: 'pointer' }}>How it Works</a>
+          <a href="#testimonials" onClick={(e) => handleSmoothScroll(e, '#testimonials')} style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: '500', cursor: 'pointer' }}>Reviews</a>
         </div>
 
         <a href="https://apps.apple.com/in/app/jobcalc-estimator/id6753925133" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '0.9rem', textDecoration: 'none' }}>
